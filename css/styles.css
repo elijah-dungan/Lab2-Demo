@@ -1,16 +1,49 @@
 * {
-    background-color: red;
-}
-a{
-    text-decoration: none;
+    background-color: black;
     color: white;
+    font-family: Arial, Helvetica, sans-serif
 }
-article ul li {
-    background-color: blue;
+header {
+    background-color:rgb(25, 25, 25);
+    text-align: center;
 }
-article ol li {
+/*header {
+    background-image: url("C:\Users\Elijah\code-fellows\201\lab2\Lab2-Demo\content\self_portrait.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}*/
+h1 {
+    background-color:rgb(25, 25, 25);
+    display: inline-block;
+    font-size: 2em;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+nav {
     background-color: white;
+    text-align: center;
+    overflow: hidden;
 }
-.orange {
-    background-color: orange'
+nav ul li {
+    background-color: white;
+    float: left;
+    list-style-type: none;
 }
+nav ul li a {
+    background-color: white;
+    display: block;
+    margin-right: 5em;
+}
+#photo {
+    margin: 0;
+    overflow: hidden;
+}
+#photo img {
+    display: block;
+    float: left;
+    margin-top: -14px;
+};
