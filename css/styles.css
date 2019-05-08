@@ -1,17 +1,17 @@
 * {
     background-color: rgb(50, 50, 50);
+    box-sizing: border-box;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
 }
 body {
     height: 100%;
     position: relative;
 }
 main {
+    display: block;
     min-height: 90vh;
     overflow: hidden;
-    display: block;
     position: relative;
     padding-bottom: 0px;
 }
@@ -25,18 +25,18 @@ header {
 }
 h1 {
     background-color:rgb(194, 104, 2, 0); 
-    padding: 1.5em;
     display: inline-block;
     font-size: 2em;
+    padding: 1.5em;
 }
 a {
     text-decoration: none;
 }
 nav {
     background-color: white;
-    text-align: center;
     overflow: hidden;
     width: 100%;
+    text-align: center;
 }
 nav ul li {
     background-color: white;
@@ -47,8 +47,8 @@ nav ul li a {
     background-color: white;
     color: black;
     display: block;
-    margin-right: 3.8em;
     margin-left: 0.2em;
+    margin-right: 3.8em;
 }
 aside {
     float: left;
@@ -64,21 +64,24 @@ section {
     margin: 0 1.5%;
     width: 63%;
 }
+article {
+    background-color: rgb(25, 25, 25);
+    height: 610px;
+    padding: 10px;
+    margin-top: 20px;
+}
 h2 {
     background-color: rgb(25, 25, 25);
     text-align: center;
-}
-article {
-    background-color: rgb(25, 25, 25);
-    padding: 10px;
-    margin-top: 20px;
-    height: 610px;
 }
 article ul {
     background-color: rgb(25, 25, 25);
     padding: 10px;
     margin-left: 40px;
     margin-right: 40px;
+}
+article ul li {
+    background-color: rgb(25, 25, 25);
 }
 #buttonarea {
     background-color: rgb(25, 25, 25);
@@ -90,15 +93,18 @@ article ul {
     font-size: 1em;
     font-weight: bold;
     height: 60px;
-    width: auto;
+    width: 200px;
+    transition: 0.4s;
 }
-article ul li {
-    background-color: rgb(25, 25, 25);
+#button:hover {
+    background-color: white;
+    color: black;
+    transition: 0.4s;
 }
 footer {
     background-color: rgb(255, 255, 255);
-    position: absolute;
     bottom: 0;
+    position: absolute;
     width: 100%;
     height: 2%;
     text-align: center;
