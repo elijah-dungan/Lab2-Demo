@@ -97,32 +97,32 @@ function guessingGame() {
         alert('Elijah has met two sports hall-of-fame inductees.');
     }
 
-     /* question Seven */
-     var qSeven = prompt('Does Elijah ride a motorcycle?'); 
-     qSeven = qSeven.toLocaleLowerCase(); // normalizes strings to lowercase
-     if(qSeven === 'yes' || qSeven === 'y') {
-         console.log('Elijah rides a motorcyle.');
-         alert(rand(ding) + ' Elijah rides a motorcyle.');
-     } else if(qSeven === 'no' || qSeven === 'n') {
-         console.log('Elijah rides a motorcyle.');
-         alert(rand(zonk) + ' Elijah rides a motorcyle.');
-     } else {
-         console.log('Elijah rides a motorcyle.');
-         alert('Elijah rides a motorcyle.');
-     }
+    /* question Seven */
+    var qSeven = prompt('Does Elijah ride a motorcycle?'); 
+    qSeven = qSeven.toLocaleLowerCase(); // normalizes strings to lowercase
+    if(qSeven === 'yes' || qSeven === 'y') {
+        console.log('Elijah rides a motorcyle.');
+        alert(rand(ding) + ' Elijah rides a motorcyle.');
+    } else if(qSeven === 'no' || qSeven === 'n') {
+        console.log('Elijah rides a motorcyle.');
+        alert(rand(zonk) + ' Elijah rides a motorcyle.');
+    } else {
+        console.log('Elijah rides a motorcyle.');
+        alert('Elijah rides a motorcyle.');
+    }
 
     /* question Eight */
     var qEight = prompt('Does Elijah have kids?'); 
     qEight = qEight.toLocaleLowerCase(); // normalizes strings to lowercase
     if(qEight === 'yes' || qEight === 'y') {
-           console.log('Elijah does not have kids.');
-           alert(rand(zonk) + ' Elijah does not have kids.');
+        console.log('Elijah does not have kids.');
+        alert(rand(zonk) + ' Elijah does not have kids.');
     } else if(qEight === 'no' || qEight === 'n') {
-           console.log('Elijah does not have kids.');
-           alert(rand(ding) + ' Elijah does not have kids.');
+        console.log('Elijah does not have kids.');
+        alert(rand(ding) + ' Elijah does not have kids.');
     } else {
-           console.log('Elijah does not have kids.');
-           alert('Elijah does not have kids.');
+        console.log('Elijah does not have kids.');
+        alert('Elijah does not have kids.');
     }
 
 };
