@@ -15,21 +15,28 @@ main {
     position: relative;
     padding-bottom: 0px;
 }
+/*
 header {
     background-color:rgb(194, 104, 2);
     text-align: center;
 }
-/*
-header {
-    background-image: url("C:\Users\Elijah\code-fellows\201\lab2\Lab2-Demo\content\self_portrait.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-}
 */
+header {
+/*
+    background-image: url("https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/35405017_2065145543538265_7500761732189519872_o.jpg?_nc_cat=105&_nc_ht=scontent-sea1-1.xx&oh=829f790b05176910fa8a2e32b8665c3e&oe=5D2B5884");
+*/
+/*  
+    background-image: url("https://ak4.picdn.net/shutterstock/videos/6903784/thumb/1.jpg");
+*/
+    background-image: url("https://scontent-sea1-1.xx.fbcdn.net/v/t31.0-8/23157064_1819688351417320_202713015639352194_o.jpg?_nc_cat=101&_nc_ht=scontent-sea1-1.xx&oh=6e3c5b2032e828e76a6233af0883e0b0&oe=5D6818BF");
+    background-repeat: no-repeat;
+    background-position: 0px -230px;
+    background-attachment: fixed;
+    background-size: 100%;
+    text-align: center;
+}
 h1 {
-    background-color:rgb(194, 104, 2);
+    background-color:rgb(194, 104, 2, 0); 
     padding: 1.5em;
     display: inline-block;
     font-size: 2em;
