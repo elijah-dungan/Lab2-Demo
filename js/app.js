@@ -7,7 +7,7 @@ function guessingGame() {
 
     /* randomizes initial responses */
     var ding = ['Correct!', 'Great guess!', 'That is true!', 'That is correct!', 'Wow! You\'re good at this!', 'Ding! Ding! Ding! We have a winner!', 'Did you peak at the code?']; // array of dings
-    var zonk = ['Wrong!', 'Incorrect!', 'That is false!', 'That is incorrect!', 'A four year old can guess better!', 'Are you even trying?', 'Zooooooonk!', 'Don\'t quit your day job.']; // array of zonks
+    var zonk = ['Wrong!', 'Incorrect!', 'That is false!', 'That is incorrect!', 'A four year old can guess better!', 'Zooooooonk!', 'Don\'t quit your day job.']; // array of zonks
     function rand(arrayInput) { 
         var randomIndex = Math.floor((Math.random()*7));
         return (arrayInput[randomIndex]);
