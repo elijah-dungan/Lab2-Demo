@@ -86,6 +86,11 @@ article ul {
 }
 #button {
     background-color: rgb(196, 39, 0);
+    border: none;
+    font-size: 1em;
+    font-weight: bold;
+    height: 60px;
+    width: auto;
 }
 article ul li {
     background-color: rgb(25, 25, 25);

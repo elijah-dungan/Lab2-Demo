@@ -2,6 +2,9 @@
 
 'use strict'; //declares strict
 
+/*function mouseOver() {
+    document.getElementById('button').style.backgroundColor = "white";*/
+
 /* wraps script in onClick */
 function guessingGame() {
 
