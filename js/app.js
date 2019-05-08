@@ -18,7 +18,7 @@ function guessingGame() {
 
     /* question One */
     var qOne = prompt('Is Elijah 5 feet, 9 inches tall?')  
-    qOne = qOne.toLowerCase(); // normalizes strings to lowercase
+    qOne = qOne.toLocaleLowerCase(); // normalizes strings to lowercase
     if(qOne === 'yes' || qOne === 'y') {
     console.log('Elijah is 5 feet, 9 inches tall.')
     alert(rand(ding) + ' Elijah is 5 feet, 9 inches tall.')
@@ -29,7 +29,7 @@ function guessingGame() {
 
     /* question Two */
     var qTwo = prompt('Does Elijah weigh 195 lbs?') 
-    qTwo = qTwo.toLowerCase(); // normalizes strings to lowercase
+    qTwo = qTwo.toLocaleLowerCase(); // normalizes strings to lowercase
     if(qTwo === 'yes' || qTwo === 'y') { 
     console.log('Elijah weighs 175 lbs.')
     alert(rand(zonk) + ' Elijah weighs 175 lbs.')
@@ -40,7 +40,7 @@ function guessingGame() {
 
     /* question Three */
     var qThree = prompt('Did Elijah serve in the military?')
-    qThree = qThree.toLowerCase(); // normalizes strings to lowercase
+    qThree = qThree.toLocaleLowerCase(); // normalizes strings to lowercase
     if(qThree === 'yes' || qThree === 'y') {
     console.log('Elijah served in the Army.')
     alert(rand(ding) + ' Elijah served in the Army.')
@@ -51,7 +51,7 @@ function guessingGame() {
 
     /* question Four */
     var qFour = prompt('Was Elijah born in Germany?') 
-    qFour = qFour.toLowerCase(); // normalizes strings to lowercase
+    qFour = qFour.toLocaleLowerCase(); // normalizes strings to lowercase
     if(qFour === 'yes' || qFour === 'y') {
     console.log('Elijah was born in Germany.')
     alert(rand(ding) + ' Elijah was born in Germany')
@@ -62,7 +62,7 @@ function guessingGame() {
 
     /* question Five */
     var qFive = prompt('Is Elijah Korean?') 
-    qFive = qFive.toLowerCase(); // normalizes strings to lowercase
+    qFive = qFive.toLocaleLowerCase(); // normalizes strings to lowercase
     /* question Five if/else statement */
     if(qFive === 'yes' || qFive === 'y') {
     console.log('Elijah is Korean.')
