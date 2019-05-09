@@ -5,9 +5,14 @@
 /* wraps script in function */
 function guessingGame() {
 
+    /* enter user name*/
+    var userName = prompt('Please enter your name.'); 
+        console.log('The users name is ' + userName);
+        alert('Hi there ' + userName + '! Now, lets play the guessing game!');
+
     /* Array of initial responses. Number of dings and zonks must be the same, or alert may return undefined */
-    var ding = ['Correct!', 'Great guess!', 'That is true!', 'That is correct!', 'Wow! You\'re good at this!', 'Ding! Ding! Ding! We have a winner!', 'Did you peak at the code?']; // array of dings
-    var zonk = ['Wrong!', 'Incorrect!', 'That is false!', 'That is incorrect!', 'A four year old can guess better!', 'Zooooooonk!', 'Don\'t quit your day job.']; //array of zonks
+    var ding = ['Correct!', 'Great guess, ' + userName + '!', 'That is true!', 'That is correct!', 'Wow! ' + userName + ' You\'re good at this!', 'Ding! Ding! Ding! We have a winner!', 'Did you peak at the code ' + userName + '?']; // array of dings
+    var zonk = ['Wrong!', 'Incorrect!', 'That is false!', 'That is incorrect!', 'A four year old can guess better, ' + userName + '!', 'Zooooooonk!', 'Don\'t quit your day job, ' + userName + '.']; //array of zonks
     
     /* array that keeps track of scores */
     var scoreArray = [];
@@ -103,11 +108,14 @@ function guessingGame() {
 
     /* gives alert based on total score, must update values when adding questions! */
     if(totalScore === 5) {
-        alert('Congratulations! You scored ' + totalScore + ' points! You guessed right on all the questions!');
+        alert('Congratulations, ' + userName + '! You scored ' + totalScore + ' points! You guessed right on all the questions!');
+        console.log(userName + ' scored ' + totalSCore + ' points.')
     } else if(totalScore >= 3) {
-        alert('Not bad! You scored ' + totalScore + ' points! You guessed right on more than half the questions!');
+        alert('Not bad, ' + userName + '! You scored ' + totalScore + ' points! You guessed right on more than half the questions!');
+        console.log(userName + ' scored ' + totalSCore + ' points.')
     } else if(totalScore < 3) {
-        alert('Wow that was bad! You scored ' + totalScore + ' points and guessed right on less than half of the questions.');
+        alert('Wow that was bad, ' + userName + '! You scored ' + totalScore + ' points and guessed right on less than half of the questions.');
+        console.log(userName + ' scored ' + totalSCore + ' points.')
     } 
 
     /* additional questions

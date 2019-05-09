@@ -78,7 +78,7 @@ article {
     padding: 10px;
     margin-top: 25px;
     margin-bottom: 25px;
-    margin-left: -18px;
+    /*margin-left: -18px;*/
     overflow-y: scroll;
 }
 h2 {
