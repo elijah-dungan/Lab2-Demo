@@ -5,11 +5,14 @@
 /* wraps script in function */
 function guessingGame() {
 
-    /* randomizes initial responses */
+    /* randomizes initial responses. number of dings and zonks must be the same, or alert may return undefined */
     var ding = ['Correct!', 'Great guess!', 'That is true!', 'That is correct!', 'Wow! You\'re good at this!', 'Ding! Ding! Ding! We have a winner!', 'Did you peak at the code?']; // array of dings
-    var zonk = ['Wrong!', 'Incorrect!', 'That is false!', 'That is incorrect!', 'A four year old can guess better!', 'Zooooooonk!', 'Don\'t quit your day job.']; // array of zonks
+    var dLength = ding.length; // gets total number of strings in array
+    var zonk = ['Wrong!', 'Incorrect!', 'That is false!', 'That is incorrect!', 'A four year old can guess better!', 'Zooooooonk!', 'Don\'t quit your day job.']; 
+    var zLength = zonk.length; // gets total number of strings in array
+    /* selects random variable */
     function rand(arrayInput) { 
-        var randomIndex = Math.floor((Math.random()*7));
+        var randomIndex = Math.floor((Math.random()*(dLength + zLength)/2)); 
         return (arrayInput[randomIndex]);
     }
 
