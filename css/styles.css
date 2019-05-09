@@ -61,8 +61,10 @@ aside {
     margin: 0 1.5%;
     overflow: hidden;
     width: 30%;
+    
 }
 aside img {
+    text-align: center;
     margin-top: -14px;
 }
 section {
@@ -72,9 +74,12 @@ section {
 }
 article {
     background-color: rgb(25, 25, 25);
-    height: 610px;
+    height: 600px;
     padding: 10px;
-    margin-top: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: -18px;
+    overflow-y: scroll;
 }
 h2 {
     background-color: rgb(25, 25, 25);
@@ -82,16 +87,20 @@ h2 {
 }
 article ul {
     background-color: rgb(25, 25, 25);
-    padding: 10px;
+    padding: 0px;
+    margin-top: -15px;
     margin-left: 40px;
     margin-right: 40px;
 }
 article ul li {
     background-color: rgb(25, 25, 25);
+    padding: 10px;
 }
 #buttonarea {
     background-color: rgb(25, 25, 25);
     text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 #button {
     background-color: rgb(196, 39, 0);
@@ -106,6 +115,17 @@ article ul li {
     background-color: white;
     color: black;
     transition: 0.4s;
+}
+article ol {
+    background-color: rgb(25, 25, 25);
+    padding: 0px;
+    margin-top: -15px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+article ol li {
+    background-color: rgb(25, 25, 25);
+    padding: 10px;
 }
 footer {
     background-color: rgb(255, 255, 255);
