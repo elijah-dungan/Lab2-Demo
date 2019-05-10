@@ -88,7 +88,7 @@ function guessingGame() {
 
     /* question Five */
     var qFive = prompt('Is Elijah Korean?'); 
-    qFive = qFive.toLocaleLowerCase(); // normalizes strings to lowercase
+    qFive = qFive.toLocaleLowerCase(); // normalizes strings to lower case
     if(qFive === 'yes' || qFive === 'y') {
         scoreArray.push(5); // adds new value to array for score tracking
         console.log('Elijah is Korean.');
@@ -101,64 +101,100 @@ function guessingGame() {
         alert('Elijah is Korean.');
     }
 
+    /* calculates DOB based on current time - dob(y, m, d) */
+    function calculateAge(dob) { 
+        var diffMS = Date.now() - dob.getTime();
+        var ageDate = new Date(diffMS); 
+        dob = new Date(1984, 6, 11);
+        return Math.abs(ageDate.getUTCFullYear() - 1970);
+    }
+    
+    var elijahsAge = calculateAge(new Date(1984, 6, 11)); // gets Elijah's DOB from calculateAge
+
+    var triesArrayOne = [1, 2, 3, 4]; // array of tries for question Six
+
+    /* question Six */
+    for(var tries = 0; tries < 4; tries++) {
+        var tries = tries;
+        var qSix = prompt('What is Elijah\'s Age?');
+        qSix = qSix.toLocaleLowerCase(); // normalizes strings to lowercase
+        console.log(' Elijah is ' + elijahsAge + ' years old.');
+        if(qSix === '34') {
+            scoreArray.push(6); // adds new value to array for score tracking
+            console.log(' Elijah is ' + elijahsAge + ' years old.');
+            alert(randomIndex(ding) + ' Elijah is ' + elijahsAge + ' years old.');
+            break;
+        } else {
+            triesArrayOne.pop(1); // removes value from array for tries tracking
+            console.log(' Elijah is ' + elijahsAge + ' years old.');
+            alert(randomIndex(zonk) + ' Try again. You have ' + triesArrayOne.length + ' tries left.');
+        }
+    }
+
+    var triesArrayTwo = [1, 2, 3, 4, 5, 6, 7] // array of tries for question Seven
+
+    var qSevenArray = ['spiderman', 'ironMan', 'doctor strange', 'batman', 'superman', 'starlord', 'deadpool']
+
+    /* question Seven */
+    for(var tries = 0; tries < 7; tries++) {
+        var tries = tries;
+        var qSeven = prompt('What is one of Elijah\s Favorite Comicbook Superheros?');
+        qSeven = qSeven.toLocaleLowerCase(); // normalizes strings to lowercase
+        console.log('Spiderman, Ironman, Doctor Strange, Batman, Superman, Starlord, Deadpool.');
+        if(qSeven === qSevenArray[0] || qSeven === qSevenArray[1] || qSeven === qSevenArray[2] || qSeven === qSevenArray[3] || qSeven === qSevenArray[4] || qSeven === qSevenArray[5] || qSeven === qSevenArray[6]) {
+            scoreArray.push(7); // adds new value to array for score tracking
+            console.log('Spiderman, Ironman, Doctor Strange, Batman, Superman, Starlord, Deadpool.');
+            alert(randomIndex(ding) + ' Elijah likes Spiderman, Ironman, Doctor Strange, Batman, Superman, Starlord, and Deadpool.');
+            break;
+        } else {
+            triesArrayTwo.pop(1); // removes value from array for tries tracking
+            console.log('Spiderman, Ironman, Doctor Strange, Batman, Superman, Starlord, Deadpool.');
+            alert(randomIndex(zonk) + ' Try again. You have ' + triesArrayTwo.length + ' tries left.');
+        }
+    }
+
     /* for loop that calculates total score */
-    for(var i = 0; i <scoreArray.length; i++) {
+    for(var i = 0; i < scoreArray.length; i++) {
         var totalScore = i + 1;
     }
-
-    /* gives alert based on total score, must update values when adding questions! */
-    if(totalScore === 5) {
+    
+    /* gives alert based on total score, must update IMPORTANT! for loop when adding questions to prevent breaking! */
+    if(totalScore === 7) {
         alert('Congratulations, ' + userName + '! You scored ' + totalScore + ' points! You guessed right on all the questions!');
-        console.log(userName + ' scored ' + totalSCore + ' points.')
-    } else if(totalScore >= 3) {
+        console.log(userName + ' scored ' + totalScore + ' points.');
+    } else if(totalScore >= 4) {
         alert('Not bad, ' + userName + '! You scored ' + totalScore + ' points! You guessed right on more than half the questions!');
-        console.log(userName + ' scored ' + totalSCore + ' points.')
-    } else if(totalScore < 3) {
+        console.log(userName + ' scored ' + totalScore + ' points.');
+    } else if(totalScore < 4) {
         alert('Wow that was bad, ' + userName + '! You scored ' + totalScore + ' points and guessed right on less than half of the questions.');
-        console.log(userName + ' scored ' + totalSCore + ' points.')
+        console.log(userName + ' scored ' + totalScore + ' points.');
     } 
 
-    /* additional questions
-    var qSix = prompt('Has Elijah met someone famous?'); 
-    qSix = qSix.toLocaleLowerCase(); // normalizes strings to lowercase
-    if(qSix === 'yes' || qSix === 'y') {
-        console.log('Elijah has met two sports hall-of-fame inductees.');
-        alert(rand(ding) + ' Elijah has met two sports hall-of-fame inductees.');
-        scoreArray.push(1);
-    } else if(qSix === 'no' || qSix === 'n') {
-        console.log('Elijah has met two sports hall-of-fame inductees.');
-        alert(rand(zonk) + ' Elijah has met two sports hall-of-fame inductees.');
-    } else {
-        console.log('Elijah has met two sports hall-of-fame inductees.');
-        alert('Elijah has met two sports hall-of-fame inductees.');
-    }
-
-    var qSeven = prompt('Does Elijah ride a motorcycle?'); 
-    qSeven = qSeven.toLocaleLowerCase(); // normalizes strings to lowercase
-    if(qSeven === 'yes' || qSeven === 'y') {
-        console.log('Elijah rides a motorcyle.');
-        alert(rand(ding) + ' Elijah rides a motorcyle.');
-        scoreArray.push(1);
-    } else if(qSeven === 'no' || qSeven === 'n') {
-        console.log('Elijah rides a motorcyle.');
-        alert(rand(zonk) + ' Elijah rides a motorcyle.');
-    } else {
-        console.log('Elijah rides a motorcyle.');
-        alert('Elijah rides a motorcyle.');
-    }
-
-    var qEight = prompt('Does Elijah have kids?'); 
-    qEight = qEight.toLocaleLowerCase(); // normalizes strings to lowercase
-    if(qEight === 'yes' || qEight === 'y') {
-        console.log('Elijah does not have kids.');
-        alert(rand(zonk) + ' Elijah does not have kids.');
-    } else if(qEight === 'no' || qEight === 'n') {
-        console.log('Elijah does not have kids.');
-        alert(rand(ding) + ' Elijah does not have kids.');
-        scoreArray.push(1);
-    } else {
-        console.log('Elijah does not have kids.');
-        alert('Elijah does not have kids.');
-    } */
-
 };
+
+/* broken legacy code, helps automate score response based on number of questions, possibly broken at Math.floor(numQuestionsArray.length/2, appeared to work with total questions was an even number
+
+var numQuestionsArray = []; // tracks number of questions
+
+IMPORTANT! for loop pushes number of questions into array, update total questions in counter whenever a new question is added
+
+for(var i = 0; i < 7; i++) {
+    numQuestionsArray.push(1); 
+    }
+
+returns number of total questions in console log for debugging purposes
+
+    console.log('Total number of questions = ' + numQuestionsArray.length) 
+
+gives alert based on total score, must update IMPORTANT! for loop when adding questions to prevent breaking! 
+
+  if(totalScore === numQuestionsArray.length) {
+    alert('Congratulations, ' + userName + '! You scored ' + totalScore + ' points! You guessed right on all the questions!');
+    console.log(userName + ' scored ' + totalScore + ' points.');
+} else if(totalScore > Math.floor(numQuestionsArray.length/2)) {
+    alert('Not bad, ' + userName + '! You scored ' + totalScore + ' points! You guessed right on more than half the questions!');
+    console.log(userName + ' scored ' + totalScore + ' points.');
+} else if(totalScore < Math.floor(numQuestionsArray.length/2)) {
+    alert('Wow that was bad, ' + userName + '! You scored ' + totalScore + ' points and guessed right on less than half of the questions.');
+    console.log(userName + ' scored ' + totalScore + ' points.');
+} */
