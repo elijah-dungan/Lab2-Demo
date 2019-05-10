@@ -7,7 +7,7 @@
         <link href="css/styles.css" type="text/css" rel="stylesheet" />
     </head>
     <body>
-        <header>
+        <header id="header1">
             <h1>About Me</h1>
             <nav>
                 <ul>
@@ -25,15 +25,12 @@
                 <article>
                     <h2>Hi, I'm Elijah! A little about me;</h2>
                     <ul>
-                        <li>My philosophy in life is centered around the principle of self-improvement. I constantly strive to overcome new challenges while learning new skills along the way. As a result, I have accumulated a plethora of skillsets. </li>
+                        <li>My philosophy in life is centered around the principle of self-improvement. I constantly strive to overcome new challenges while learning new skills along the way. As a result, I have accumulated a plethora of skill sets. </li>
                         <li>I am an auto-didact (e.g., a self learner). I love to solve problems, fix broken things, and find more better and efficient ways of doing things. I am also what you call a "do-it-yourself" enthusiast.  </li>
                         <li>My current passions and interests include software programming, music composition, audio and video recording, music and video production, live production, field recording, and motorcycle riding.</li> 
                         <li>For fun, I love to ride my Kawasaki Ninja 400, socialize with friends and family, visit Olympia National Park, host games nights featuring table-top board games, build or fix computers, tinker with new technology, watch movies, and play PC games or the Nintendo Switch.</li>
                         <li>My most recent jobs involved Client Services Coordination and Program Coordination in Healthcare Administration. In the past, I was a telecommunications technician in the Army. Currently, I am looking to re-enter the field of Information Technology. </li>
                     </ul>
-                    <div id="buttonarea">
-                        <button id="button" onclick="guessingGame()">Play My Guessing Game!</button>
-                    </div>
                     <h2>My Top 10 Favorite Table-Top Games:</h2>
                     <ol>
                         <li>Mansions of Madness, 2nd Edition</li>
@@ -49,9 +46,14 @@
                     </ol>
                 </article>
             </section>
+            <div id="subfooter">
+                <p id="copyright">Copyright &copy; 2019 Codefellows | Web design by Elijah Dungan</p>
+            </div>
         </main>
         <footer>
-            <p id="copyright">Copyright &copy; 2019 Codefellows | Web design by Elijah Dungan</p>
+            <div id="buttonarea">
+                <button id="button" onclick="guessingGame()">Play My Guessing Game!</button>
+            </div>
         </footer>
         <script src="js/app.js" type="text/javascript"></script>
     </body>

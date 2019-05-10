@@ -138,7 +138,7 @@ function guessingGame() {
     /* question Seven */
     for(var tries = 0; tries < 7; tries++) {
         var tries = tries;
-        var qSeven = prompt('What is one of Elijah\s Favorite Comicbook Superheros?');
+        var qSeven = prompt('What is one of Elijah\'s Favorite Comicbook Superheros?');
         qSeven = qSeven.toLocaleLowerCase(); // normalizes strings to lowercase
         console.log('Spiderman, Ironman, Doctor Strange, Batman, Superman, Starlord, Deadpool.');
         if(qSeven === qSevenArray[0] || qSeven === qSevenArray[1] || qSeven === qSevenArray[2] || qSeven === qSevenArray[3] || qSeven === qSevenArray[4] || qSeven === qSevenArray[5] || qSeven === qSevenArray[6]) {
