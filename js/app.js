@@ -2,13 +2,13 @@
 
 /* preloads audio sounds for immediate buffer, chrome disrupts from spamming */
 var dingSound = new Audio();
-dingSound.src = 'C:/Users/Elijah/code-fellows/201/lab2/Lab2-Demo/content/ding.wav';
+dingSound.src = './content/ding.wav';
 dingSound.preload = 'auto';
 var zonkSound = new Audio();
-zonkSound.src = 'C:/Users/Elijah/code-fellows/201/lab2/Lab2-Demo/content/zonk.wav';
+zonkSound.src = './content/zonk.wav';
 zonkSound.preload = 'auto';
 var queuSound = new Audio();
-queuSound.src = 'C:/Users/Elijah/code-fellows/201/lab2/Lab2-Demo/content/queu.wav';
+queuSound.src = './content/queu.wav';
 queuSound.preload = 'auto';
 
 /* guessing game about me that involves 7 questions */
