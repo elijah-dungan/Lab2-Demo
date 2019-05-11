@@ -105,6 +105,8 @@ article ul {
 }
 article p {
     background-color: rgb(25, 25, 25, 0);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1em;
     padding: 10px;
     margin-top: -15px;
     margin-left: 40px;
@@ -112,7 +114,12 @@ article p {
 }
 article ul li {
     background-color: rgb(25, 25, 25, 0);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1em;
     padding: 10px;
+}
+article ul li a {
+    font-size: 1em;
 }
 article ol {
     background-color: rgb(25, 25, 25, 0);
