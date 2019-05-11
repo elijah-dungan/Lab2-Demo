@@ -38,7 +38,7 @@ function guessingGame() {
     /* question One */
     queuSound.play();
     var qOne = prompt('Is Elijah 5 feet, 9 inches tall?');  
-    qOne = qOne.toLocaleLowerCase(); // normalizes strings to lowercase
+    qOne = qOne.toLowerCase(); // normalizes strings to lowercase
     if(qOne === 'yes' || qOne === 'y') {
         scoreArray.push(1); // adds new value to array for score tracking
         console.log('Elijah is 5 feet, 9 inches tall.');
@@ -53,7 +53,7 @@ function guessingGame() {
 
     /* question Two */
     var qTwo = prompt('Does Elijah weigh 195 lbs?'); 
-    qTwo = qTwo.toLocaleLowerCase(); // normalizes strings to lowercase
+    qTwo = qTwo.toLowerCase(); // normalizes strings to lowercase
     if(qTwo === 'yes' || qTwo === 'y') { 
         console.log('Elijah weighs 175 lbs, not 195 lbs.');
         alert(randomIndex(zonk) + ' Elijah weighs 175 lbs, not 195 lbs.');
@@ -68,7 +68,7 @@ function guessingGame() {
 
     /* question Three */
     var qThree = prompt('Did Elijah serve in the military?');
-    qThree = qThree.toLocaleLowerCase(); // normalizes strings to lowercase
+    qThree = qThree.toLowerCase(); // normalizes strings to lowercase
     if(qThree === 'yes' || qThree === 'y') {
         scoreArray.push(3); // adds new value to array for score tracking
         console.log('Elijah served in the Army.');
@@ -83,7 +83,7 @@ function guessingGame() {
 
     /* question Four */
     var qFour = prompt('Was Elijah born in Germany?'); 
-    qFour = qFour.toLocaleLowerCase(); // normalizes strings to lowercase
+    qFour = qFour.toLowerCase(); // normalizes strings to lowercase
     if(qFour === 'yes' || qFour === 'y') {
         scoreArray.push(4); // adds new value to array for score tracking
         console.log('Elijah was born in Germany.');
@@ -98,7 +98,7 @@ function guessingGame() {
 
     /* question Five */
     var qFive = prompt('Is Elijah Korean?'); 
-    qFive = qFive.toLocaleLowerCase(); // normalizes strings to lower case
+    qFive = qFive.toLowerCase(); // normalizes strings to lower case
     if(qFive === 'yes' || qFive === 'y') {
         scoreArray.push(5); // adds new value to array for score tracking
         console.log('Elijah is Korean.');
@@ -127,9 +127,9 @@ function guessingGame() {
     for(var tries = 0; tries < 4; tries++) {
         var tries = tries;
         var qSix = prompt('What is Elijah\'s Age?');
-        qSix = qSix.toLocaleLowerCase(); // normalizes strings to lowercase
+        qSix = qSix.toLowerCase(); // normalizes strings to lowercase
         console.log(' Elijah is ' + elijahsAge + ' years old.');
-        if(qSix === '34') {
+        if(qSix == elijahsAge) {
             scoreArray.push(6); // adds new value to array for score tracking
             console.log(' Elijah is ' + elijahsAge + ' years old.');
             alert(randomIndex(ding) + ' Elijah is ' + elijahsAge + ' years old.');
@@ -141,15 +141,15 @@ function guessingGame() {
         }
     }
 
-    var triesArrayTwo = [1, 2, 3, 4, 5, 6, 7] // array of tries for question Seven
+    var triesArrayTwo = [1, 2, 3, 4, 5, 6] // array of tries for question Seven
 
     var qSevenArray = ['spiderman', 'ironMan', 'doctor strange', 'batman', 'superman', 'starlord', 'deadpool']
 
     /* question Seven */
-    for(var tries = 0; tries < 7; tries++) {
+    for(var tries = 0; tries < 6; tries++) {
         var tries = tries;
         var qSeven = prompt('What is one of Elijah\'s Favorite Comicbook Superheros?');
-        qSeven = qSeven.toLocaleLowerCase(); // normalizes strings to lowercase
+        qSeven = qSeven.toLowerCase(); // normalizes strings to lowercase
         console.log('Spiderman, Ironman, Doctor Strange, Batman, Superman, Starlord, Deadpool.');
         if(qSeven === qSevenArray[0] || qSeven === qSevenArray[1] || qSeven === qSevenArray[2] || qSeven === qSevenArray[3] || qSeven === qSevenArray[4] || qSeven === qSevenArray[5] || qSeven === qSevenArray[6]) {
             scoreArray.push(7); // adds new value to array for score tracking

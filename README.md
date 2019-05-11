@@ -10,3 +10,5 @@ My About Me page gives a brief discription and list of my favorite table-top gam
 
 The Guessing Game is quite complex. It features randomized responses, a scoring tracker, and questions that provide a limited number of tries. I plan on adding an additional feature that randomizes the order of the questions. 
 
+Driver: Valerie Sobol
+Navigator: Elijah Dungan
