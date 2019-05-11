@@ -1,3 +1,15 @@
+var dingSound = new Audio();
+dingSound.src = 'C:/Users/Elijah/code-fellows/201/lab2/Lab2-Demo/content/ding.wav';
+dingSound.preload = 'auto';
+
+var zonkSound = new Audio();
+zonkSound.src = 'C:/Users/Elijah/code-fellows/201/lab2/Lab2-Demo/content/zonk.wav';
+zonkSound.preload = 'auto';
+
+var queuSound = new Audio();
+queuSound.src = 'C:/Users/Elijah/code-fellows/201/lab2/Lab2-Demo/content/queu.wav';
+queuSound.preload = 'auto';
+
 /* guessing game about me that involves 5 yes/no questions */
 
 'use strict'; //declares strict
@@ -10,7 +22,7 @@ function guessingGame() {
         console.log('The users name is ' + userName);
         alert('Hi there ' + userName + '! Now, lets play the guessing game!');
 
-    /* Array of initial responses. Number of dings and zonks must be the same, or alert may return undefined */
+    /* array of initial responses. Number of dings and zonks must be the same, or alert may return undefined */
     var ding = ['Correct!', 'Great guess, ' + userName + '!', 'That is true!', 'That is correct!', 'Wow! ' + userName + ' You\'re good at this!', 'Ding! Ding! Ding! We have a winner!', 'Did you peak at the code ' + userName + '?']; // array of dings
     var zonk = ['Wrong!', 'Incorrect!', 'That is false!', 'That is incorrect!', 'A four year old can guess better, ' + userName + '!', 'Zooooooonk!', 'Don\'t quit your day job, ' + userName + '.']; //array of zonks
     
@@ -20,13 +32,14 @@ function guessingGame() {
     var dLength = ding.length; // gets total number of strings in array
     var zLength = zonk.length; // gets total number of strings in array
 
-    /* Randomizes dings and zonks based on total number of dings and zonks divided by 2*/
+    /* randomizes dings and zonks based on total number of dings and zonks divided by 2*/
     function randomIndex(array) { 
         var i = Math.floor((Math.random()*(dLength + zLength)/2)); 
         return (array[i]);
     }
 
     /* question One */
+    queuSound.play();
     var qOne = prompt('Is Elijah 5 feet, 9 inches tall?');  
     qOne = qOne.toLocaleLowerCase(); // normalizes strings to lowercase
     if(qOne === 'yes' || qOne === 'y') {
@@ -170,6 +183,8 @@ function guessingGame() {
         console.log(userName + ' scored ' + totalScore + ' points.');
     } 
 
+    var elScore = document.getElementById('button');
+    elScore.textContent = 'You Scored ' + totalScore + ' Points! Play Again?';
 };
 
 /* broken legacy code, helps automate score response based on number of questions, possibly broken at Math.floor(numQuestionsArray.length/2, appeared to work with total questions was an even number
