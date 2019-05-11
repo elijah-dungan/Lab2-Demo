@@ -170,21 +170,30 @@ function guessingGame() {
     for(var i = 0; i < scoreArray.length; i++) {
         var totalScore = i + 1;
     }
+
+    function displayScore() {
+        var elScore = document.getElementById('button');
+        elScore.textContent = 'You Scored ' + totalScore + ' Points! Play Again?';
+    } 
     
     /* gives alert based on total score, must update IMPORTANT! for loop when adding questions to prevent breaking! */
     if(totalScore === 7) {
         alert('Congratulations, ' + userName + '! You scored ' + totalScore + ' points! You guessed right on all the questions!');
         console.log(userName + ' scored ' + totalScore + ' points.');
+        displayScore();
     } else if(totalScore >= 4) {
         alert('Not bad, ' + userName + '! You scored ' + totalScore + ' points! You guessed right on more than half the questions!');
         console.log(userName + ' scored ' + totalScore + ' points.');
+        displayScore();
     } else if(totalScore < 4) {
         alert('Wow that was bad, ' + userName + '! You scored ' + totalScore + ' points and guessed right on less than half of the questions.');
         console.log(userName + ' scored ' + totalScore + ' points.');
-    } 
+        displayScore();
+    } else { 
+        alert('You should try participating next time!');
+        console.log(userName + ' scored ' + totalScore + ' points.');
+    }
 
-    var elScore = document.getElementById('button');
-    elScore.textContent = 'You Scored ' + totalScore + ' Points! Play Again?';
 };
 
 /* broken legacy code, helps automate score response based on number of questions, possibly broken at Math.floor(numQuestionsArray.length/2, appeared to work with total questions was an even number
