@@ -38,16 +38,9 @@ function guessingGame() {
 
     /* question One */
     queuSound.play();
-<<<<<<< HEAD
     answers.qOne = prompt('Is Elijah 5 feet, 9 inches tall?');  
     answers.qOne = answers.qOne.toLowerCase(); // normalizes strings to lowercase
     if(answers.qOne === 'yes' || answers.qOne === 'y') {
-=======
-    var qOne = prompt('Is Elijah 5 feet, 9 inches tall?');  
-    qOne = qOne.toLowerCase(); // normalizes strings to lowercase
-    if(qOne === 'yes' || qOne === 'y') {
-        scoreArray.push(1); // adds new value to array for score tracking
->>>>>>> efc773fb0cefce72f446fc2e1edaa6a25319fe5b
         console.log('Elijah is 5 feet, 9 inches tall.');
         alert(randomIndex(ding) + ' Elijah is 5 feet, 9 inches tall.');
         totalScore ++;
@@ -60,15 +53,9 @@ function guessingGame() {
     }
 
     /* question Two */
-<<<<<<< HEAD
     answers.qTwo = prompt('Does Elijah weigh 195 lbs?'); 
     answers.qTwo = answers.qTwo.toLowerCase(); // normalizes strings to lowercase
     if(answers.qTwo === 'yes' || answers.qTwo === 'y') { 
-=======
-    var qTwo = prompt('Does Elijah weigh 195 lbs?'); 
-    qTwo = qTwo.toLowerCase(); // normalizes strings to lowercase
-    if(qTwo === 'yes' || qTwo === 'y') { 
->>>>>>> efc773fb0cefce72f446fc2e1edaa6a25319fe5b
         console.log('Elijah weighs 175 lbs, not 195 lbs.');
         alert(randomIndex(zonk) + ' Elijah weighs 175 lbs, not 195 lbs.');
     } else if(answers.qTwo === 'no' || answers.qTwo === 'n') {
@@ -81,16 +68,9 @@ function guessingGame() {
     }
 
     /* question Three */
-<<<<<<< HEAD
     answers.qThree = prompt('Did Elijah serve in the military?');
     answers.qThree = answers.qThree.toLowerCase(); // normalizes strings to lowercase
     if(answers.qThree === 'yes' || answers.qThree === 'y') {
-=======
-    var qThree = prompt('Did Elijah serve in the military?');
-    qThree = qThree.toLowerCase(); // normalizes strings to lowercase
-    if(qThree === 'yes' || qThree === 'y') {
-        scoreArray.push(3); // adds new value to array for score tracking
->>>>>>> efc773fb0cefce72f446fc2e1edaa6a25319fe5b
         console.log('Elijah served in the Army.');
         alert(randomIndex(ding) + ' Elijah served in the Army.');
         totalScore ++;
@@ -103,16 +83,9 @@ function guessingGame() {
     }
 
     /* question Four */
-<<<<<<< HEAD
     answers.qFour = prompt('Was Elijah born in Germany?'); 
     answers.qFour = answers.qFour.toLowerCase(); // normalizes strings to lowercase
     if(answers.qFour === 'yes' || answers.qFour === 'y') {
-=======
-    var qFour = prompt('Was Elijah born in Germany?'); 
-    qFour = qFour.toLowerCase(); // normalizes strings to lowercase
-    if(qFour === 'yes' || qFour === 'y') {
-        scoreArray.push(4); // adds new value to array for score tracking
->>>>>>> efc773fb0cefce72f446fc2e1edaa6a25319fe5b
         console.log('Elijah was born in Germany.');
         alert(randomIndex(ding) + ' Elijah was born in Germany.');
         totalScore ++;
@@ -125,16 +98,10 @@ function guessingGame() {
     }
 
     /* question Five */
-<<<<<<< HEAD
     answers.qFive = prompt('Is Elijah Korean?'); 
     answers.qFive = answers.qFive.toLowerCase(); // normalizes strings to lower case
     if(answers.qFive === 'yes' || answers.qFive === 'y') {
-=======
-    var qFive = prompt('Is Elijah Korean?'); 
-    qFive = qFive.toLowerCase(); // normalizes strings to lower case
-    if(qFive === 'yes' || qFive === 'y') {
-        scoreArray.push(5); // adds new value to array for score tracking
->>>>>>> efc773fb0cefce72f446fc2e1edaa6a25319fe5b
+
         console.log('Elijah is Korean.');
         alert(randomIndex(ding) + ' Elijah is Korean.');
         totalScore ++;
@@ -159,17 +126,10 @@ function guessingGame() {
     /* question Six */
     for(var tries = 0; tries < 4; tries++) {
         var tries = tries;
-<<<<<<< HEAD
+
         answers.qSix = prompt('What is Elijah\'s Age?');
         console.log(' Elijah is ' + elijahsAge + ' years old.');
         if(answers.qSix == elijahsAge) {
-=======
-        var qSix = prompt('What is Elijah\'s Age?');
-        qSix = qSix.toLowerCase(); // normalizes strings to lowercase
-        console.log(' Elijah is ' + elijahsAge + ' years old.');
-        if(qSix == elijahsAge) {
-            scoreArray.push(6); // adds new value to array for score tracking
->>>>>>> efc773fb0cefce72f446fc2e1edaa6a25319fe5b
             console.log(' Elijah is ' + elijahsAge + ' years old.');
             alert(randomIndex(ding) + ' Elijah is ' + elijahsAge + ' years old.');
             totalScore ++;
@@ -179,13 +139,7 @@ function guessingGame() {
             alert(randomIndex(zonk) + ' Try again. You have ' + (3 - tries) + ' tries left.');
         }
     }
-<<<<<<< HEAD
-   
-=======
 
-    var triesArrayTwo = [1, 2, 3, 4, 5, 6] // array of tries for question Seven
-
->>>>>>> efc773fb0cefce72f446fc2e1edaa6a25319fe5b
     var qSevenArray = ['spiderman', 'ironMan', 'doctor strange', 'batman', 'superman', 'starlord', 'deadpool']
     var triesTotal = 6
     var correct = false;
@@ -193,13 +147,8 @@ function guessingGame() {
     /* question Seven */
     for(var tries = 0; tries < 6; tries++) {
         var tries = tries;
-<<<<<<< HEAD
         answers.qSeven = prompt('What is one of Elijah\'s Favorite Comicbook Superheros?');
         answers.qSeven = answers.qSeven.toLowerCase(); // normalizes strings to lowercase
-=======
-        var qSeven = prompt('What is one of Elijah\'s Favorite Comicbook Superheros?');
-        qSeven = qSeven.toLowerCase(); // normalizes strings to lowercase
->>>>>>> efc773fb0cefce72f446fc2e1edaa6a25319fe5b
         console.log('Spiderman, Ironman, Doctor Strange, Batman, Superman, Starlord, Deadpool.');
         if(answers.qSeven === qSevenArray[0] || answers.qSeven === qSevenArray[1] || answers.qSeven === qSevenArray[2] || answers.qSeven === qSevenArray[3] || answers.qSeven === qSevenArray[4] || answers.qSeven === qSevenArray[5] || answers.qSeven === qSevenArray[6]) {
             console.log('Spiderman, Ironman, Doctor Strange, Batman, Superman, Starlord, Deadpool.');
