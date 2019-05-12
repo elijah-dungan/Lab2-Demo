@@ -122,21 +122,33 @@ function guessingGame() {
     }
     
     var elijahsAge = calculateAge(new Date(1984, 6, 11)); // gets Elijah's DOB from calculateAge
+    var tryTotal = 4;
 
     /* question Six */
     for(var tries = 0; tries < 4; tries++) {
-        var tries = tries;
-
+        //var tries = tries;
         answers.qSix = prompt('What is Elijah\'s Age?');
         console.log(' Elijah is ' + elijahsAge + ' years old.');
-        if(answers.qSix == elijahsAge) {
+        if(tries === 3 && parseInt(answers.qSix) !== elijahsAge) {
+            alert('Elijah is ' + elijahsAge + ' years old.');
+            console.log('The user did not guess the right age.');
+            break;
+        }
+        if(parseInt(answers.qSix) === elijahsAge) {
             console.log(' Elijah is ' + elijahsAge + ' years old.');
             alert(randomIndex(ding) + ' Elijah is ' + elijahsAge + ' years old.');
             totalScore ++;
             break;
+        } else if(parseInt(answers.qSix) > elijahsAge) {
+            tryTotal --;
+            answers.qSix = prompt(randomIndex(zonk) + ' Guess lower. You have ' + tryTotal + ' tries left.');
+        } else if(parseInt(answers.qSix) < elijahsAge) {
+            tryTotal --;
+            answers.qSix = prompt(randomIndex(zonk) + ' Guess higher. You have ' + tryTotal + ' tries left.');
         } else {
+            tryTotal --;
             console.log(' Elijah is ' + elijahsAge + ' years old.');
-            alert(randomIndex(zonk) + ' Try again. You have ' + (3 - tries) + ' tries left.');
+            alert(randomIndex(zonk) + ' Try again. You have ' + tryTotal + ' tries left.');
         }
     }
 
@@ -146,7 +158,7 @@ function guessingGame() {
 
     /* question Seven */
     for(var tries = 0; tries < 6; tries++) {
-        var tries = tries;
+        //var tries = tries;
         answers.qSeven = prompt('What is one of Elijah\'s Favorite Comicbook Superheros?');
         answers.qSeven = answers.qSeven.toLowerCase(); // normalizes strings to lowercase
         console.log('Spiderman, Ironman, Doctor Strange, Batman, Superman, Starlord, Deadpool.');
