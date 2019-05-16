@@ -1,16 +1,5 @@
 'use strict'; //declares strict
 
-/* preloads audio sounds for immediate buffer, chrome disrupts from spamming */
-var dingSound = new Audio();
-dingSound.src = './content/ding.wav';
-dingSound.preload = 'auto';
-var zonkSound = new Audio();
-zonkSound.src = './content/zonk.wav';
-zonkSound.preload = 'auto';
-var queuSound = new Audio();
-queuSound.src = './content/queu.wav';
-queuSound.preload = 'auto';
-
 /* guessing game about me that involves 7 questions */
 function guessingGame() {
 
@@ -32,12 +21,11 @@ function guessingGame() {
         return (array[i]);
     }
 
-    var answers = {}; // array that tracks answers/questions total
+    var answers = {}; // object that tracks answers/questions total
 
     var totalScore = 0; // keeps track of score total
 
     /* question One */
-    queuSound.play();
     answers.qOne = prompt('Is Elijah 5 feet, 9 inches tall?');  
     answers.qOne = answers.qOne.toLowerCase(); // normalizes strings to lowercase
     if(answers.qOne === 'yes' || answers.qOne === 'y') {
@@ -122,11 +110,10 @@ function guessingGame() {
     }
     
     var elijahsAge = calculateAge(new Date(1984, 6, 11)); // gets Elijah's DOB from calculateAge
-    var tryTotal = 4;
+    var tryTotal = 4; // tracks total tries
 
     /* question Six */
     for(var tries = 0; tries < 4; tries++) {
-        //var tries = tries;
         answers.qSix = prompt('What is Elijah\'s Age?');
         console.log(' Elijah is ' + elijahsAge + ' years old.');
         if(tries === 3 && parseInt(answers.qSix) !== elijahsAge) {
@@ -152,13 +139,12 @@ function guessingGame() {
         }
     }
 
-    var qSevenArray = ['spiderman', 'ironMan', 'doctor strange', 'batman', 'superman', 'starlord', 'deadpool']
-    var triesTotal = 6
-    var correct = false;
+    var qSevenArray = ['spiderman', 'ironMan', 'doctor strange', 'batman', 'superman', 'starlord', 'deadpool'] // array of my favorite superheroes
+    var triesTotal = 6 // tracks total tries
+    var correct = false; // used to break out of loop
 
     /* question Seven */
     for(var tries = 0; tries < 6; tries++) {
-        //var tries = tries;
         answers.qSeven = prompt('What is one of Elijah\'s Favorite Comicbook Superheros?');
         answers.qSeven = answers.qSeven.toLowerCase(); // normalizes strings to lowercase
         console.log('Spiderman, Ironman, Doctor Strange, Batman, Superman, Starlord, Deadpool.');
@@ -174,14 +160,13 @@ function guessingGame() {
             alert(randomIndex(zonk) + ' Try again. You have ' + (triesTotal) + ' tries left.');
         }
     }
-
     if(triesTotal === 0 && correct === false) {
         alert('Elijah likes Spiderman, Ironman, Doctor Strange, Batman, Superman, Starlord, and Deadpool.');
     }
 
-    answers.push;
+    answers.push; // pushes answers into answers variable to track total number of answers/questions
 
-    function displayScore() {
+    function displayScore() { // displays score in button
         var elScore = document.getElementById('button');
         elScore.textContent = 'You Scored ' + totalScore + ' Points! Play Again?';
     } 
@@ -205,23 +190,3 @@ function guessingGame() {
     }
 
 };
-
-/* broken legacy code, helps automate score response based on number of questions, possibly broken at Math.floor(numQuestionsArray.length/2, appeared to work with total questions was an even number
-var numQuestionsArray = []; // tracks number of questions
-IMPORTANT! for loop pushes number of questions into array, update total questions in counter whenever a new question is added
-for(var i = 0; i < 7; i++) {
-    numQuestionsArray.push(1); 
-    }
-returns number of total questions in console log for debugging purposes
-    console.log('Total number of questions = ' + numQuestionsArray.length) 
-gives alert based on total score, must update IMPORTANT! for loop when adding questions to prevent breaking! 
-  if(totalScore === numQuestionsArray.length) {
-    alert('Congratulations, ' + userName + '! You scored ' + totalScore + ' points! You guessed right on all the questions!');
-    console.log(userName + ' scored ' + totalScore + ' points.');
-} else if(totalScore > Math.floor(numQuestionsArray.length/2)) {
-    alert('Not bad, ' + userName + '! You scored ' + totalScore + ' points! You guessed right on more than half the questions!');
-    console.log(userName + ' scored ' + totalScore + ' points.');
-} else if(totalScore < Math.floor(numQuestionsArray.length/2)) {
-    alert('Wow that was bad, ' + userName + '! You scored ' + totalScore + ' points and guessed right on less than half of the questions.');
-    console.log(userName + ' scored ' + totalScore + ' points.');
-} */
